@@ -7,13 +7,14 @@ const Projects = async () => {
     });
     const jsonData = await revalidatedData.json();
     return (
+            
             <section id="projects" className=" text-center  bg-white">
             <h2 className="pb-6 pt-6 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:bg-gray-900 dark:text-white">Projects</h2>
             <div className="grid max-h-[20rem] border border-gray-200 shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 overflow-y-scroll">
                 
                 {
                     jsonData.map((element: any) => (
-                        <figure className="flex flex-col items-center justify-center  text-center bg-white border-b border-gray-200  md:rounded-t-none  md:border-r dark:bg-gray-800 dark:border-gray-700">
+                        <figure key={element.id} className="flex flex-col items-center justify-center  text-center bg-white border-b border-gray-200  md:rounded-t-none  md:border-r dark:bg-gray-800 dark:border-gray-700">
                         <blockquote className="max-w-2xl mx-auto  text-gray-500  dark:text-gray-400">
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{element.name}</h3>
                             <div className="flex items-center">

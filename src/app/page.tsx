@@ -7,6 +7,7 @@ export default function Page() {
   return (
     <main className=" min-h-screen p-24 ">
       <Home/>
+      {/* @ts-expect-error Server Component */}
       <Projects />
       <About />
     </main>
